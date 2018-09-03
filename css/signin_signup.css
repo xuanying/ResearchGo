@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", "Times New Roman", Georgia, serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* ---------------main---------------- */
+.main{
+    width: 100%;
+    height: 100%;
+    background: url(../images/signup1.jpg) no-repeat center;
+    background-size: 100%;
+    z-index: -1;
+}
+/* 标题栏 */
+.body_header{
+    position: fixed;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.body_header .main_logo{
+    display: inline-block;
+    width: 60px;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 40px;
+}
+.body_header h1{
+    display: inline-block;
+    font-size: 2.2em;
+    color: #fff;
+    font-weight: lighter;
+    vertical-align: bottom;
+}
+/* 侧边选择点 */
+.dot_select{
+    position: fixed;
+    top: 40%; 
+    right: 50px;
+    z-index: 1;
+}
+.dot_select li{
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.dot_select .dotted{
+    background: url(../images/dot_white.png) no-repeat center;
+    background-size: 15px; 
+}
+.dot_select .dotted_now{
+    background: url(../images/dot.png) no-repeat center;
+    background-size: 15px;
+}
+/* 向上向下翻页 */
+.p_up{
+    background: url(../images/p_up.png) no-repeat center;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    cursor: pointer;
+}
+.p_up:hover{
+    background: url(../images/h_up.png) no-repeat center;
+    background-size: 50px;
+}
+.p_down{
+    background:url(../images/p_down.png) no-repeat center;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    cursor: pointer;
+}
+.p_down:hover{
+    background: url(../images/h_down.png) no-repeat center;
+    background-size: 50px;
+}
+/* 背景 */
+.pages{
+    position: relative;
+    width: 1200px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.wrapper{
+    position: absolute;
+    float: left;
+    background: none;
+    list-style: none;
+}
+.wrapper .bg_mask{
+    width: 100%;
+    height: 100%;
+    float: left;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    display: none; 
+}
+.main_page{
+    width: 1200px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.main_page .main_description{
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    width: 400px;
+    /* z-index: 1; */
+}
+.main_description h1{
+    /* display: inline-block; */
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    color: #c7cda5;
+    font-family: Verdana,"Times New Roman", Times, serif;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+/* 登录注册块 */
+.login_signup{
+    margin-top: 15px;
+    text-align: center;
+}
+.login_signup .button{
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    width: 16%;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    padding: .5em 2em .55em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    border-radius: .5em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    border: 1px solid #fff;
+    margin-right: 10px;
+}
+.login_signup .button:first-child{
+    letter-spacing: 5px;
+}
+.login_signup .button:hover{
+    background-color: #2caeb6;
+}
