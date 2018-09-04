@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js/fortest.js"></script>
+    <link rel="stylesheet" href="./css/fortest.css">
+</head>
+
+<body>
+    <div>
+        <button id="test">测试</button>
+    </div>
+    <div id="window">
+        <div class="page for_login" style="display:none">
+            <img class="fadeIn delay5 img_x" src="./images/x.png" alt="">
+            <div class="page_content">
+                <div class="input_row">
+                    <label for="logName" class="label fadeIn">邮箱</label>
+                    <input type="email" id="logName" name="username" required="required" class="input fadeIn delay1">
+                </div>
+                <div class="input_row">
+                    <label for="logPwd" class="label fadeIn delay2">密码</label>
+                    <input type="password" id="logPsd" name="password" required="required" class="input fadeIn delay2">
+                </div>
+                <div class="input_row">
+                    <label for="logcode_up" class="label fadeIn delay3">验证码</label>
+                    <input type="Verification" id="logcode_up" required="required" class="input fadeIn delay3">
+                    <ul id="logcode_in" class="fadeIn delay4" title="看不清楚?点击更换">
+                        <span class="word_1" style="color: rgb(236, 214, 195); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">H</span>
+                        <span class="word_2" style="color: rgb(236, 214, 195); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">V</span>
+                        <span class="word_3" style="color: rgb(236, 214, 195); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">I</span>
+                        <span class="word_4" style="color: rgb(236, 214, 195); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">C</span>
+                    </ul>
+                </div>
+                <div class="input_row perspective">
+                    <button id="logsub" class="button fadeIn delay4"><span class="default">登录</span>
+                    </button>
+                    <label class="fadeIn delay5">还未注册？</label>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="testindex">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+        </div>
+</body>
+
+</html>

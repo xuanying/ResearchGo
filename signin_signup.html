@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=Edge">
     <title>注册&登录</title>
-    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js//jquery-3.3.1.js"></script>
     <script src="./js/signin_signup.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/signin_signup.css">
+    <link rel="stylesheet" href="./css/signin_signup.css">
+
 </head>
+
 <body>
-    <span id="err" style="display:none">{{err}}</span>
+    <span id="err" style="display: none">{{err}}</span>
     <div class="main">
         <div class="body_header">
-            <img class="main_logo" src="./images/xnr.jpg" alt="">
+            <img class="main_logo" src="./images/xnr.jpg">
             <h1>ResearchGo</h1>
         </div>
         <div class="dot_select">
@@ -24,53 +26,115 @@
                 <li class="dotted"></li>
             </ul>
         </div>
-        <div class="p_up" style="display:none"></div>
+        <div class="p_up" style="display: none"></div>
         <div class="p_down"></div>
         <div class="pages">
             <div class="wrapper">
                 <div class="bg_mask"></div>
-            </div>
-            <div class="main_page" id="m_one">
-                <div class="main_description">
-                    <h1>科研，不再孤单</h1>
-                    <div class="login_signup">
-                        <span class="button" id="login">登录</span>
-                        <span class="button" id="signup">立即注册</span>
-                    </div>
-                </div>
-            </div>
-            <div class="window">
-                <div class="page for_login" style="display:none">
-                    <img class="fadeIn delay5 img_x" src="./images/x.png" alt="">
-                    <div class="page_content">
-                        <div class="input-row">
-                            <label for="logName" class="label fadeIn">邮箱</label>
-                            <input type="email" id="logName" name="username" required="required" class="input fadeIn delay1">
-                        </div>
-                        <div class="input-rpw">
-                            <label for="logPwd" class="label fadeIn delay2">密码</label>
-                            <input type="password" id="logPwd" name="password" required="required" class="input fadeIn delay2">
-                        </div>
-                        <div class="input-row">
-                            <label for="logcode_up" class="label fadeIn delay3" >验证码</label>
-                            <input type="Verification" id="logcode_up" required="required" class="input fadeIn delay3">
-                            <ul id="logcode_in" class="fadeIn delay4" title="看不清楚?点击更换">
-                                    <span class="word_1" style="color: rgb(236, 214, 195); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">H</span>
-                                    <span class="word_2" style="color: rgb(236, 214, 195); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">V</span>
-                                    <span class="word_3" style="color: rgb(236, 214, 195); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">I</span>
-                                    <span class="word_4" style="color: rgb(236, 214, 195); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">C</span>
-                            </ul>
-                        </div>
-                        <div class="input-row perspective">
-                            <button id="logsub" class="button fadeIn delay4"><span class="default">登录</span>
-                            </button>
-                            <label class="fadeIn delay5">还未注册？</label>
+                <div class="main_page" id="m_one" style="display:none">
+                    <img class="main_bg" src="./images/signup1.jpg">
+                    <div class="main_discription">
+                        <h1>科研，不再孤单</h1>
+                        <div class="login_signup">
+                            <span class="button" id="login">登录</span>
+                            <span class="button" id="signup">立即注册</span>
                         </div>
                     </div>
+                    <div id="window">
+                        <div class="page for_login" style="display: none">
+
+                            <img class="fadeIn delay5 img_x" src="./images/x.png">
+                            <div class="page-content">
+                                <!--<form id="form_login" action="/register/" method="post">-->
+                                <div class="input-row">
+                                    <label class="label fadeIn">邮箱</label>
+                                    <input id="logName" name="username" type="email" required="required" class="input fadeIn delay1" />
+                                </div>
+                                <div class="input-row">
+                                    <label class="label fadeIn delay2">密码</label>
+                                    <input id="logPsd" name="password" type="password" required="required" class="input fadeIn delay2" />
+                                </div>
+                                <!--<input id="state" name = 'state' value = 'login' type = 'hidden' />-->
+                                <div class="input-row">
+                                    <label class="label fadeIn delay3">验证码</label>
+                                    <input id="logcode_up" type="Verification" required="required" class="input fadeIn delay3" />
+                                    <ul id="logcode_in" class="fadeIn delay4" title="看不清楚？点击更换">
+                                        <span class="word_1" style="color: rgb(236, 214, 195); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">H</span>
+                                        <span class="word_2" style="color: rgb(50, 175, 195); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">v</span>
+                                        <span class="word_3" style="color: rgb(50, 125, 180); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">I</span>
+                                        <span class="word_4" style="color: rgb(254, 96, 48); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">U</span>
+                                    </ul>
+                                </div>
+                                <div class="input-row perspective">
+                                    <button id="logsub" class="button fadeIn delay4"><span class="default">登录</span>
+                                    </button>
+                                    <label class="fadeIn delay5">还未注册？</label>
+                                </div>
+                                <!--</form>-->
+                            </div>
+                        </div>
+                        <div class="page for_signup" style="display: none;">
+                            <img class="fadeIn delay5 img_x" src="./images/x.png">
+                            <div class="page-content">
+                                <!--<form id="form_reg" action="/register/" method="post">-->
+                                <div class="input-row">
+                                    <label class="label fadeIn">邮箱</label>
+                                    <input id="signName" name="username" type="email" class="input fadeIn delay1" />
+                                </div>
+                                <div class="input-row">
+                                    <label class="label fadeIn delay2">密码</label>
+                                    <input id="signPsd" name="password" type="password" class="input fadeIn delay2" />
+                                </div>
+                                <div class="input-row">
+                                    <label class="label fadeIn delay2">再次输入密码</label>
+                                    <input id="repsd" type="password" class="input fadeIn delay2" />
+                                </div>
+                                <!--<input id="rstate" name = 'state' value = 'login' type = 'hidden' />-->
+                                <div class="input-row">
+                                    <label class="label fadeIn delay3">验证码</label>
+                                    <input id="signcode_up" type="Verification" class="input fadeIn delay3" />
+                                    <ul id="signcode_in" class="fadeIn delay4" title="看不清楚？点击更换">
+                                        <span class="word_1" style="color: rgb(236, 214, 195); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">H</span>
+                                        <span class="word_2" style="color: rgb(50, 175, 195); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">v</span>
+                                        <span class="word_3" style="color: rgb(50, 125, 180); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">I</span>
+                                        <span class="word_4" style="color: rgb(254, 96, 48); text-align: center; height: 100%; line-height: 40px; width: 15%; padding: 0 1%; font-size: 1.5em; display: inline-block;">U</span>
+                                    </ul>
+                                </div>
+                                <div class="input-row perspective">
+                                    <button id="signsub" class="button fadeIn delay4"><span class="default">注册</span>
+                                    </button>
+                                    <label class="fadeIn delay5">已有账号？</label>
+                                </div>
+                                <!--</form>-->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
+                <div class="main_page" id="m_two">
+                    <img class="main_bg" src="./images/signup2.jpg">
+                    <div class="main_discription">
+                        <h1>找对研究方向，</h1>
+                        <h2>发表高质量文章</h2>
+                    </div>
+                </div>
+                <div class="main_page" id="m_three">
+                    <img class="main_bg" src="./images//signup3.jpg">
+                    <div class="main_discription">
+                        <h1>及时获取最新的研究成果</h1>
+                    </div>
+                </div>
+                <div class="main_page" id="m_four">
+                    <img class="main_bg" src="./images/signup4.jpg">
+                    <div class="main_discription">
+                        <h1>和大牛成为合作者</h1>
+                    </div>
+                </div>
             </div>
         </div>
+        <footer class="footer"></footer>
     </div>
+
+
 </body>
+
 </html>

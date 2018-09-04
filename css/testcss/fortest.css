@@ -1,0 +1,279 @@
+#window{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    color: #fff;
+    -webkit-animation: 1.5s second ease-in-out backwards;
+    -moz-animation: 1.5s second ease-in-out backwards;
+    animation: 1.5s second ease-in-out backwards;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -moz-transition-property: height, width;
+    -o-transition-property: height, width;
+    -webkit-transition-property: height, width;
+    transition-property: height, width;
+}
+.img_x{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-top: 15px;
+    margin-left: 92%;
+    z-index: 4;
+    cursor: pointer;
+}
+#window, #window .page, #window .page-content {
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+#window .page {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #444;
+    background-image: -moz-linear-gradient(bottom, #444444, #333333);
+    background-image: -webkit-linear-gradient(bottom, #444444, #333333);
+    background-image: linear-gradient(to top, #444444, #333333);
+    border-radius: 6px;
+    padding: 60px;
+}
+#window .input_row {
+    margin: 0 0
+     20px;
+}
+#window .input_row:last-of-type {
+    margin-bottom: 0;
+}
+#window .perspective {
+    -moz-perspective: 1000px;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+#window .label {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    color: #FFF;
+    display: block;
+}
+#window .input {
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    border: 0;
+    background: #FFF;
+    display: inline-block;
+}
+#logName,#signName,#logPsd,#signPsd,#repsd {
+    width: 100%;
+}
+#logcode_up, #signcode_up {
+    display: inline-block;
+    width: 50%;
+}
+#logcode_in, #signcode_in {
+    cursor:pointer;
+    background-color: #1E1E1E;
+    display: inline-block;
+    width: 30%;
+    float:right;
+    text-align: center;
+}
+#window .input:focus{
+    -moz-box-shadow: 0 0 0 3px #6a9997;
+    -webkit-box-shadow: 0 0 0 3px #6a9997;
+    box-shadow: 0 0 0 3px #6a9997;
+}
+#window .button {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+    margin: 0;
+    text-align: center;
+    color: #FFF;
+    border: 0;
+    display: block;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 17px;
+    background: #2caeb6;
+    border-radius: 3px;
+}
+#window .perspective label{
+    color: #fff;
+    float: right;
+    margin-top: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.fadeIn {
+    -webkit-animation: 1s fadeIn cubic-bezier(0.015, 0.695, 0.34, 1.365) backwards;
+    -moz-animation: 1s fadeIn cubic-bezier(0.015, 0.695, 0.34, 1.365) backwards;
+    animation: 1s fadeIn cubic-bezier(0.015, 0.695, 0.34, 1.365) backwards;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.delay1 {
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2;
+    animation-delay: 1.2s;
+}
+.delay2 {
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+}
+.delay3 {
+    -webkit-animation-delay: 1.4s;
+    -moz-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+}
+.delay4 {
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+.delay5 {
+    -webkit-animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+@-webkit-keyframes second {
+    0% {
+        -moz-transform: scale(0) rotateX(360deg);
+        -ms-transform: scale(0) rotateX(360deg);
+        -webkit-transform: scale(0) rotateX(360deg);
+        transform: scale(0) rotateX(360deg);
+        height: 150px;
+        width: 150px;
+    }
+
+    50% {
+        -moz-transform: none;
+        -ms-transform: none;
+        -webkit-transform: none;
+        transform: none;
+        height: 150px;
+    }
+
+    75% {
+        height: 350px;
+        width: 150px;
+    }
+
+    100% {
+        width: 450px;
+    }
+}
+@-moz-keyframes second {
+    0% {
+        -moz-transform: scale(0) rotateX(360deg);
+        -ms-transform: scale(0) rotateX(360deg);
+        -webkit-transform: scale(0) rotateX(360deg);
+        transform: scale(0) rotateX(360deg);
+        height: 150px;
+        width: 150px;
+    }
+
+    50% {
+        -moz-transform: none;
+        -ms-transform: none;
+        -webkit-transform: none;
+        transform: none;
+        height: 150px;
+    }
+
+    75% {
+        height: 350px;
+        width: 150px;
+    }
+
+    100% {
+        width: 450px;
+    }
+}
+@keyframes second {
+    0% {
+        -moz-transform: scale(0) rotateX(360deg);
+        -ms-transform: scale(0) rotateX(360deg);
+        -webkit-transform: scale(0) rotateX(360deg);
+        transform: scale(0) rotateX(360deg);
+        height: 150px;
+        width: 150px;
+    }
+
+    50% {
+        -moz-transform: none;
+        -ms-transform: none;
+        -webkit-transform: none;
+        transform: none;
+        height: 150px;
+    }
+
+    75% {
+        height: 350px;
+        width: 150px;
+    }
+
+    100% {
+        width: 450px;
+    }
+}
+
+.testindex{
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+.one{
+    position:fixed;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    z-index:3 ;
+}
+.two{
+    position:fixed;
+    top: 50px;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    z-index: 2;
+}
+.three{
+    position:fixed;
+    top: 50px;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background-color: chartreuse;
+    z-index: 1;
+}
+.four{
+    position:fixed;
+    top: 50px;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    z-index: -1;
+}
