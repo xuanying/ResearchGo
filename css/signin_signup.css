@@ -96,7 +96,7 @@ body {
     cursor: pointer;
 }
 .p_down:hover{
-    background: url('../images//p_down.png') no-repeat center;
+    background: url('../images/p_down.png') no-repeat center;
     background-size: 50px;
 }
 /*背景图*/

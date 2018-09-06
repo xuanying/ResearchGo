@@ -6,14 +6,16 @@
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=Edge">
     <title>注册&登录</title>
     <script src="./js//jquery-3.3.1.js"></script>
+    <script src="./js/jquery.mousewheel.min.js"></script>
     <script src="./js/signin_signup.js"></script>
     <link rel="stylesheet" href="./css/signin_signup.css">
+    <link rel="icon" href="./images/logo.ico" type="image/x-icon"/>
 
 </head>
 
 <body>
     <span id="err" style="display: none">{{err}}</span>
-    <div class="main">
+    <div class="main" id="login_sign">
         <div class="body_header">
             <img class="main_logo" src="./images/xnr.jpg">
             <h1>ResearchGo</h1>
@@ -31,7 +33,7 @@
         <div class="pages">
             <div class="wrapper">
                 <div class="bg_mask"></div>
-                <div class="main_page" id="m_one" style="display:none">
+                <div class="main_page" id="m_one">
                     <img class="main_bg" src="./images/signup1.jpg">
                     <div class="main_discription">
                         <h1>科研，不再孤单</h1>
@@ -118,7 +120,7 @@
                     </div>
                 </div>
                 <div class="main_page" id="m_three">
-                    <img class="main_bg" src="./images//signup3.jpg">
+                    <img class="main_bg" src="./images/signup3.jpg">
                     <div class="main_discription">
                         <h1>及时获取最新的研究成果</h1>
                     </div>
