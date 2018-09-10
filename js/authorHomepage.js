@@ -1,8 +1,10 @@
-$(function(){
+$(function () {
     //首字母大写
-    function ReplaceFirstUper(str){
+    function ReplaceFirstUper(str) {
         str = str.toLowerCase();
-        return str.replace(/\b(\w)|\s(\w)/g, function(m){ return m.toUpperCase(); });
+        return str.replace(/\b(\w)|\s(\w)/g, function (m) {
+            return m.toUpperCase();
+        });
     }
     //数据处理
     var author_data = $("#author_data").text();
@@ -12,17 +14,17 @@ $(function(){
     console.log(authorInfo);
     var domain_ls = [];
 
-    if(authorInfo.Author_Portrait != null){//头像
-        $(".basic_information .portrait img").attr("src","data:image/jpg;base64,"+ authorInfo.Portrait);
+    if (authorInfo.Author_Portrait != null) { //头像
+        $(".basic_information .portrait img").attr("src", "data:image/jpg;base64," + authorInfo.Portrait);
     }
-    $(".information_head .name").text(authorInfo.Author_Name);//姓名
+    $(".information_head .name").text(authorInfo.Author_Name); //姓名
     //小领域对象
     //显示作者所在中领域
-    $.each(authorInfo.Author_Domain, function (key,value) {
+    $.each(authorInfo.Author_Domain, function (key, value) {
         domain_ls.push(key);
-        $(".field_rank .fields_all ul").append('<li id="' + key + '">' + ReplaceFirstUper(key.substr(0,key.length-5)) +' (' + authorInfo.Middle_R_Level[key] + ')' + '</li>');
+        $(".field_rank .fields_all ul").append('<li id="' + key + '">' + ReplaceFirstUper(key.substr(0, key.length - 5)) + ' (' + authorInfo.Middle_R_Level[key] + ')' + '</li>');
     });
-    $(".field_rank .fields_all ul li").on('mouseover',function () {
+    $(".field_rank .fields_all ul li").on('mouseover', function () {
         $(this).addClass('active').siblings().removeClass('active');
         var field_id = $(this).attr('id');
         if (authorInfo.Author_Domain[field_id].length > 0) {
@@ -41,60 +43,180 @@ $(function(){
                     var r_grade = authorInfo.Middle_R_Level[field_id];
                     if (r_grade == 'R0') {
                         $("#layer ul").append('<li><span class="' + key + '" id="' + p + '">' + ReplaceFirstUper(p) + '<span> Top 5‰</span>' + '</span></li>');
-                    }
-                    else if (r_grade == 'R1') {
+                    } else if (r_grade == 'R1') {
                         $("#layer ul").append('<li><span class="' + key + '" id="' + p + '">' + ReplaceFirstUper(p) + '<span> Top 5%</span>' + '</span></li>');
-                    }
-                    else if (r_grade == 'R2') {
+                    } else if (r_grade == 'R2') {
                         $("#layer ul").append('<li><span class="' + key + '" id="' + p + '">' + ReplaceFirstUper(p) + '<span> Top 1/4</span>' + '</span></li>');
-                    }
-                    else if (r_grade == 'R3') {
+                    } else if (r_grade == 'R3') {
                         $("#layer ul").append('<li><span class="' + key + '" id="' + p + '">' + ReplaceFirstUper(p) + '<span> Top 1/2</span>' + '</span></li>');
-                    }
-                    else if (r_grade == 'R4') {
+                    } else if (r_grade == 'R4') {
                         $("#layer ul").append('<li><span class="' + key + '" id="' + p + '">' + ReplaceFirstUper(p) + '<span> Top 3/4</span>' + '</span></li>');
-                    }
-                    else {
+                    } else {
                         $("#layer ul").append('<li><span class="' + key + '" id="' + p + '">' + ReplaceFirstUper(p) + '<span> Top ...</span>' + '</span></li>');
                     }
                 });
             }
         }
     });
-    $(".field_rank .fields_all ul li").on('mouseleave',function () {
+    $(".field_rank .fields_all ul li").on('mouseleave', function () {
         $(this).removeClass('active');
-         $("#layer").remove();
-     });
-     //Level
-    if (authorInfo.Author_Level == null){
+        $("#layer").remove();
+    });
+    //Level
+    if (authorInfo.Author_Level == null) {
         $("#author_level").text('R5');
-    }
-    else{
+    } else {
         $("#author_level").text(authorInfo.Author_Level);
     }
     //organization
-    var org_str = '/institution/?Institution='+$.base64.encode(encodeURI(authorInfo.Author_Institution.Institution))+'&InstitutionId='+$.base64.encode(encodeURI(authorInfo.Author_Institution.InstitutionId)); 
-    $("#org").append('<a href = ' + org_str + '>' + authorInfo.Author_Institution.Institution + '</a>');//机构
+    var org_str = '/institution/?Institution=' + $.base64.encode(encodeURI(authorInfo.Author_Institution.Institution)) + '&InstitutionId=' + $.base64.encode(encodeURI(authorInfo.Author_Institution.InstitutionId));
+    $("#org").append('<a href = ' + org_str + '>' + authorInfo.Author_Institution.Institution + '</a>'); //机构
     //connection
-    if(authorInfo.Phone){
-        $(".connection ul").append('<li><img src="./images/phone.png"><span>' + authorInfo.Phone + '</span></li>');//电话
+    if (authorInfo.Phone) {
+        $(".connection ul").append('<li><img src="./images/phone.png"><span>' + authorInfo.Phone + '</span></li>'); //电话
     }
     $(".connection ul").append('<li><img src="./images/email.png"><span>' + authorInfo.Author_Email + '</span></li>');
-    $("#cited_num").text(authorInfo.Cited_High + '/' + authorInfo.Cited_Num);//引用数
-    $("#article_num").text(authorInfo.Article_High + '/' + authorInfo.Article_Num);//文章数
-    $("#page").text(authorInfo.Personal_Homepage);//个人主页
-    if(authorInfo.Personal_Show){
-        $("#introduction").text(authorInfo.Personal_Show);//个人简介
+    $("#cited_num").text(authorInfo.Cited_High + '/' + authorInfo.Cited_Num); //引用数
+    $("#article_num").text(authorInfo.Article_High + '/' + authorInfo.Article_Num); //文章数
+    $("#page").text(authorInfo.Personal_Homepage); //个人主页
+    if (authorInfo.Personal_Show) {
+        $("#introduction").text(authorInfo.Personal_Show); //个人简介
     }
-    $("#int_more").click(function(e){
+    $("#int_more").click(function (e) {
         $('#introduction_more').show();
         e.stopPropagation();
     });
-    $("#introduction_more").click(function(e){
+    $("#introduction_more").click(function (e) {
         e.stopPropagation();
     });
-    $(document).on("click", function(){
+    $(document).on("click", function () {
         $("#introduction_more").hide();
     });
+    //文章列表
+    var articles = $(".new_list");
+    var article_li = "";
+    //设置默认排序
+    var tOrder = authorInfo.Author_Paper.sort(function (a, b) {
+        if (a.Paper_Year > b.Paper_Year) return -1;
+        if (a.Paper_Year < b.Paper_Year) return 1;
+        if (a.Paper_Year = b.Paper_Year) {
+            a.Paper_Level.localeCompare(b.Paper_Level);
+        }
+        return 0;
+    });
+    articles.empty();
+    $.each(tOrder, function (index, value) {
+        create_articleLi(value);
+        articles.append(article_li);
+    });
+
+    function create_articleLi(value) {
+        var str = '/paperDetail/?Paper_Title=' + $.base64.encode(encodeURI(value.Paper_Title)) + '&Paper_Journal=' + $.base64.encode(encodeURI(value.Paper_Journal)) + '&Paper_Year=' + $.base64.encode(encodeURI(value.Paper_Year));
+        article_li = '<li><h3><span class="ar_year">' + value.Paper_Year + '</span><a href=' + str + '>' + value.Paper_Title + '</a></h3>';
+        //作者
+        article_li += '<p class="ar_author">';
+        $.each(value.Paper_Author, function (n, val) {
+            str = '/authorDetail/?Author_Name=' + $.base64.encode(encodeURI(val.Author_Name)) + '&Author_Email=' + $.base64.encode(encodeURI(val.Author_Email)) + '&Author_ID=' + $.base64.encode(encodeURI(val.Author_ID));
+            article_li += '<a href = ' + str + '>' + val.Author_Name + '(' + val.Author_Level + ')</a>';
+            if (n != value.Paper_Author.length - 1) {
+                article_li += ',';
+            }
+        });
+        article_li = article_li.substring(0, article_li.length - 2);
+        article_li += '</p>';
+        //刊物
+        str = '/journaldetail/?Journal=' + $.base64.encode(encodeURI(value.Paper_Journal));
+        if (value.Journal_Level != null) {
+            article_li += '<p class="ar_jour"><a href = ' + str + '>' + value.Paper_Journal + '(' + value.Journal_Level + ')</a></p>';
+        } else {
+            article_li += '<p class="ar_jour"><a href = ' + str + '>' + value.Paper_Journal + '</a></p>';
+        }
+        //领域
+        var article_domainspan = value.Paper_Domain;
+        var article_li_domainspan = '';
+        if (article_domainspan != null) {
+            $.each(article_domainspan, function (key, value) {
+                article_li_domainspan += '<span>' + key + '</span>,';
+            });
+            article_li_domainspan = article_li_domainspan.substring(0, article_li_domainspan.length - 2);
+            article_li += '<p class="ar_domain">领域:' + article_li_domainspan + '</p>';
+        }
+
+        //档次
+        //只取最高档次
+        article_li += '<p class="ar_level">档次:<span>' + value.Paper_Level + ' </span></p>';
+        article_li += '<div class="item_info"><span class="high_cite">' + value.Cited_High + '</span><span class="cite">' + value.Cited_Num + '</span></div></li>';
+    }
+    pager(authorInfo.Author_Paper.length);
+    //若文章总数大于10，异步加载文章，显示“正在加载”，不显示分页插件和排序选项
+    $("#pagerArea").show();
+    //按时间排序
+    $("#time_ordering").on('click', function () {
+        if ($(this).attr("class") == "active") return false;
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+        var timeOrder = authorInfo.Author_Paper.sort(function (a, b) {
+            if (a.Paper_Year > b.Paper_Year) return -1;
+            if (a.Paper_Year < b.Paper_Year) return 1;
+            if (a.Paper_Year = b.Paper_Year) {
+                a.Paper_Level.localeCompare(b.Paper_Level);
+            }
+            return 0;
+        });
+        articles.empty();
+        $.each(timeOrder, function (index, value) {
+            create_articleLi(value);
+            articles.append(article_li);
+        });
+        pager(timeOrder.length);
+    });
+    //按档次排序
+    $("#level_ordering").on('click', function () {
+        if ($(this).attr("class") == "active") return false;
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+        var levelOrder = authorInfo.Author_Paper.sort(function (a, b) {
+            if (a.Paper_Level.localeCompare(b.Paper_Level) != 0) {
+                return a.Paper_Level.localeCompare(b.Paper_Level); //比较两篇文章的等级高低并返回排序
+            } else {
+                if (a.Paper_Year > b.Paper_Year) return -1;
+                if (a.Paper_Year < b.Paper_Year) return 1;
+                return 0;
+            }
+        });
+        articles.empty();
+        $.each(levelOrder, function (index, value) {
+            create_articleLi(value);
+            articles.append(article_li);
+        });
+        pager(levelOrder.length);
+    });
+    //分页
+    function pager(length) {
+        var article_list = $(".new_list li");
+        $("#pagerArea").cypager({
+            pg_size: 2,
+            pg_nav_count: 6,
+            pg_total_count: length,
+            pg_prev_name:'上一页',
+            pg_next_name:'下一页'
+        });
+        var page_now = 0,
+            i = 0;
+        article_list.hide();
+        for (i = 0; i < 2; i++) {
+            article_list.eq(i).show();
+        }
+        $(".pager li").click(function () {
+            $(".article_list").css("padding-bottom", 0);
+            page_now = parseInt($(".pager li.pg-selected").text()) - 1;
+            article_list.hide();
+            for (i = page_now * 2; i < (page_now + 1) * 2; i++) {
+                article_list.eq(i).show();
+            }
+        });
+    }
+    //关键词
+    //Start
     
 })
