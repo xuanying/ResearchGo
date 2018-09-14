@@ -11,7 +11,6 @@ $(function () {
     // author_data = '{"Author_Email":"67815265@qq.com","Author_Name":"Zhang David D.","Author_ID":"None","Author_Portrait":"None","If_Collect":"True","If_Atten":"True","Author_Domain":{"Materials Science(all)":[],"Computer Science(all)":["software","information systems","artificial intelligence","computer network and comunications"],"Engineering(all)":["biomedical engineering"],"Health Professions(all)":["health information management"],"Mathematics(all)":[]},"Middle_R_Level":{"Materials Science(all)":"R2","Computer Science(all)":"R0","Engineering(all)":"R0","Health Professions(all)":"R3","Mathematics(all)":"R1"},"Phone":"","Author_Level":"R0","Author_Institution":{"Institution":"Hong Kong Polytechnic University","Institution_ID":"None"},"Article_Num":"157","Article_High":"67","Cited_Num":"4","Cited_High":"0","Personal_Homepage":"","Personal_Show":"","Author_Keyword":["Computer","Materials Science","Computer Science","software","information systems","artificial intelligence","Health Professions","health information management","Mathematics","Engineering"],"Author_Paper":[{"Paper_Title":"A Novel Pattern Clustering Algorithm Based on Particle Swarm Optimization Joint Adaptive Wavelet Neural Network Model","Paper_Journal":"MOBILE NETWORKS & APPLICATIONS","Journal_Level":"C","Paper_Year":"2010","Paper_Level":"C","Paper_Domain":{"Computer Science(All)":"A","Library And Information Sciences":"B","Computer Science Applications":"A"},"Paper_Author": {"Chandra V.":{"Author_Email":"vikas","Author_Name":"Chandra V.","Author_ID": "26767588000","Author_Level":"R0"},"Dasika G.":{"Author_Email":"vikas","Author_Name":"Dasika G.","Author_ID": "26767588000","Author_Level":"R0"},"Chiyuan Zhang":{"Author_Email":"vikas","Author_Name":"Chiyuan Zhang","Author_ID": "26767588000","Author_Level":"R0"},"Moritz Hardt":{"Author_Email":"vikas","Author_Name":"Moritz Hardt","Author_ID": "26767588000","Author_Level":"R0"}},"Cited_Num":"5","Cited_High":"9"},{"Paper_Title":"Human-level control through deep reinforcement learning","Paper_Journal":"Nature","Journal_Level":"A","Paper_Year":"2015","Paper_Level":"A","Paper_Domain":{"Computer Science(All)":"A","Library And Information Sciences":"B","Computer Science Applications":"A"},"Paper_Author": {"Demis Hassabis":{"Author_Email":"vikas","Author_Name":"Demis Hassabis","Author_ID": "26767588000","Author_Level":"R0"},"Koray Kavukcuoglu":{"Author_Email":"vikas","Author_Name":"Koray Kavukcuoglu","Author_ID": "26767588000","Author_Level":"R0"},"Volodymyr Mnih":{"Author_Email":"vikas","Author_Name":"Volodymyr Mnih","Author_ID": "26767588000","Author_Level":"R0"},"David Silver":{"Author_Email":"vikas","Author_Name":"David Silver","Author_ID": "26767588000","Author_Level":"R0"}},"Cited_Num":"10","Cited_High":"6"},{"Paper_Title":"Mastering the game of Go with deep neural networks and tree search","Paper_Journal":"Nature","Journal_Level":"A","Paper_Year":"2016","Paper_Level":"B","Paper_Domain":{"Computer Science(All)":"A","Library And Information Sciences":"B","Computer Science Applications":"A"},"Paper_Author": {"Demis Hassabis":{"Author_Email":"vikas","Author_Name":"Demis Hassabis","Author_ID": "26767588000","Author_Level":"R0"},"Aja Huang":{"Author_Email":"vikas","Author_Name":"Aja Huang","Author_ID": "26767588000","Author_Level":"R0"},"Madeleine Leach":{"Author_Email":"vikas","Author_Name":"Madeleine Leach","Author_ID": "26767588000","Author_Level":"R0"},"Timothy P. Lillicrap":{"Author_Email":"vikas","Author_Name":"Timothy P. Lillicrap","Author_ID": "26767588000","Author_Level":"R0"}},"Cited_Num":"15","Cited_High":"9"},{"Paper_Title":"Learning Deep Belief Networks from Non-stationary Streams","Paper_Journal":"ICANN","Journal_Level":"A","Paper_Year":"2012","Paper_Level":"A","Paper_Domain":{"Computer Science(All)":"A","Library And Information Sciences":"B","Computer Science Applications":"A"},"Paper_Author": {"Federico Montesino-Pouzols":{"Author_Email":"vikas","Author_Name":"Federico Montesino-Pouzols","Author_ID": "26767588000","Author_Level":"R0"},"Marc Peter Deisenroth":{"Author_Email":"vikas","Author_Name":"Marc Peter Deisenroth","Author_ID": "26767588000","Author_Level":"R0"},"Tapani Raiko":{"Author_Email":"vikas","Author_Name":"Tapani Raiko","Author_ID": "26767588000","Author_Level":"R0"},"Roberto Calandra":{"Author_Email":"vikas","Author_Name":"Roberto Calandra","Author_ID": "26767588000","Author_Level":"R0"}},"Cited_Num":"25","Cited_High":"19"},{"Paper_Title":"A Classification-Based Polyphonic Piano Transcription Approach Using Learned Feature Representations","Paper_Journal":"ISMIR","Journal_Level":"A","Paper_Year":"2011","Paper_Level":"C","Paper_Domain":{"Computer Science(All)":"A","Library And Information Sciences":"B","Computer Science Applications":"A"},"Paper_Author": {"Malcolm Slaney":{"Author_Email":"vikas","Author_Name":"Malcolm Slaney","Author_ID": "26767588000","Author_Level":"R0"},"Honglak Lee":{"Author_Email":"vikas","Author_Name":"Honglak Lee","Author_ID": "26767588000","Author_Level":"R0"},"Jiquan Ngiam":{"Author_Email":"vikas","Author_Name":"Jiquan Ngiam","Author_ID": "26767588000","Author_Level":"R0"},"Juhan Nam":{"Author_Email":"vikas","Author_Name":"Juhan Nam","Author_ID": "26767588000","Author_Level":"R0"}},"Cited_Num":"24","Cited_High":"12"}],"Friend_List":{},"Fans_List":{},"Attention_List":{}}';
     author_data = '{"Author_Email":"67815265@qq.com","Author_Name":"Zhang David D.","Author_ID":"None","Author_Portrait":"None","If_Collect":"True","If_Atten":"True","Author_Domain":{"Materials Science(all)":[],"Computer Science(all)":["software","information systems","artificial intelligence","computer network and comunications"],"Engineering(all)":["biomedical engineering"],"Health Professions(all)":["health information management"],"Mathematics(all)":[]},"Middle_R_Level":{"Materials Science(all)":"R2","Computer Science(all)":"R0","Engineering(all)":"R0","Health Professions(all)":"R3","Mathematics(all)":"R1"},"Phone":"","Author_Level":"R0","Author_Institution":{"Institution":"Hong Kong Polytechnic University","Institution_ID":"None"},"Article_Num":"157","Article_High":"67","Cited_Num":"4","Cited_High":"0","Personal_Homepage":"","Personal_Show":"这个人很懒，什么都没留下","Author_Keyword":["Computer","Materials Science","Computer Science","software","information systems","artificial intelligence","Health Professions","health information management","Mathematics","Engineering"],"Author_Paper":[{"Paper_Title":"A Novel Pattern Clustering Algorithm Based on Particle Swarm Optimization Joint Adaptive Wavelet Neural Network Model","Paper_Journal":"MOBILE NETWORKS & APPLICATIONS","Journal_Level":"C","Paper_Year":"2010","Paper_Level":"C","Paper_Domain":{"Computer Science(All)":"A","Library And Information Sciences":"B","Computer Science Applications":"A"},"Paper_Author":{"Chandra V.":{"Author_Email":"vikas","Author_Name":"Chandra V.","Author_ID":"26767588000","Author_Level":"R0"},"Dasika G.":{"Author_Email":"vikas","Author_Name":"Dasika G.","Author_ID":"26767588000","Author_Level":"R0"},"Chiyuan Zhang":{"Author_Email":"vikas","Author_Name":"Chiyuan Zhang","Author_ID":"26767588000","Author_Level":"R0"},"Moritz Hardt":{"Author_Email":"vikas","Author_Name":"Moritz Hardt","Author_ID":"26767588000","Author_Level":"R0"}},"Cited_Num":"5","Cited_High":"9"},{"Paper_Title":"Human-level control through deep reinforcement learning","Paper_Journal":"Nature","Journal_Level":"A","Paper_Year":"2015","Paper_Level":"A","Paper_Domain":{"Computer Science(All)":"A","Library And Information Sciences":"B","Computer Science Applications":"A"},"Paper_Author":{"Demis Hassabis":{"Author_Email":"vikas","Author_Name":"Demis Hassabis","Author_ID":"26767588000","Author_Level":"R0"},"Koray Kavukcuoglu":{"Author_Email":"vikas","Author_Name":"Koray Kavukcuoglu","Author_ID":"26767588000","Author_Level":"R0"},"Volodymyr Mnih":{"Author_Email":"vikas","Author_Name":"Volodymyr Mnih","Author_ID":"26767588000","Author_Level":"R0"},"David Silver":{"Author_Email":"vikas","Author_Name":"David Silver","Author_ID":"26767588000","Author_Level":"R0"}},"Cited_Num":"10","Cited_High":"6"},{"Paper_Title":"Mastering the game of Go with deep neural networks and tree search","Paper_Journal":"Nature","Journal_Level":"A","Paper_Year":"2016","Paper_Level":"B","Paper_Domain":{"Computer Science(All)":"A","Library And Information Sciences":"B","Computer Science Applications":"A"},"Paper_Author":{"Demis Hassabis":{"Author_Email":"vikas","Author_Name":"Demis Hassabis","Author_ID":"26767588000","Author_Level":"R0"},"Aja Huang":{"Author_Email":"vikas","Author_Name":"Aja Huang","Author_ID":"26767588000","Author_Level":"R0"},"Madeleine Leach":{"Author_Email":"vikas","Author_Name":"Madeleine Leach","Author_ID":"26767588000","Author_Level":"R0"},"Timothy P. Lillicrap":{"Author_Email":"vikas","Author_Name":"Timothy P. Lillicrap","Author_ID":"26767588000","Author_Level":"R0"}},"Cited_Num":"15","Cited_High":"9"},{"Paper_Title":"Learning Deep Belief Networks from Non-stationary Streams","Paper_Journal":"ICANN","Journal_Level":"A","Paper_Year":"2012","Paper_Level":"A","Paper_Domain":{"Computer Science(All)":"A","Library And Information Sciences":"B","Computer Science Applications":"A"},"Paper_Author":{"Federico Montesino-Pouzols":{"Author_Email":"vikas","Author_Name":"Federico Montesino-Pouzols","Author_ID":"26767588000","Author_Level":"R0"},"Marc Peter Deisenroth":{"Author_Email":"vikas","Author_Name":"Marc Peter Deisenroth","Author_ID":"26767588000","Author_Level":"R0"},"Tapani Raiko":{"Author_Email":"vikas","Author_Name":"Tapani Raiko","Author_ID":"26767588000","Author_Level":"R0"},"Roberto Calandra":{"Author_Email":"vikas","Author_Name":"Roberto Calandra","Author_ID":"26767588000","Author_Level":"R0"}},"Cited_Num":"25","Cited_High":"19"},{"Paper_Title":"A Classification-Based Polyphonic Piano Transcription Approach Using Learned Feature Representations","Paper_Journal":"ISMIR","Journal_Level":"A","Paper_Year":"2011","Paper_Level":"C","Paper_Domain":{"Computer Science(All)":"A","Library And Information Sciences":"B","Computer Science Applications":"A"},"Paper_Author":{"Malcolm Slaney":{"Author_Email":"vikas","Author_Name":"Malcolm Slaney","Author_ID":"26767588000","Author_Level":"R0"},"Honglak Lee":{"Author_Email":"vikas","Author_Name":"Honglak Lee","Author_ID":"26767588000","Author_Level":"R0"},"Jiquan Ngiam":{"Author_Email":"vikas","Author_Name":"Jiquan Ngiam","Author_ID":"26767588000","Author_Level":"R0"},"Juhan Nam":{"Author_Email":"vikas","Author_Name":"Juhan Nam","Author_ID":"26767588000","Author_Level":"R0"}},"Cited_Num":"24","Cited_High":"12"}],"Friend_List":{},"Fans_List":{},"Attention_List":{}}'
     var authorInfo = $.parseJSON(author_data);
-    console.log(authorInfo);
     var domain_ls = [];
 
     if (authorInfo.Author_Portrait != null) { //头像
@@ -198,8 +197,8 @@ $(function () {
             pg_size: 2,
             pg_nav_count: 6,
             pg_total_count: length,
-            pg_prev_name:'上一页',
-            pg_next_name:'下一页'
+            pg_prev_name: '上一页',
+            pg_next_name: '下一页'
         });
         var page_now = 0,
             i = 0;
@@ -218,5 +217,108 @@ $(function () {
     }
     //关键词
     //Start
-    
+    var keywords_area = $("#my_keywords");
+    if(authorInfo.Author_Keyword.length > 0){
+        var K_length = authorInfo.Author_Keyword.length;
+        if(authorInfo.Author_Keyword.length > 10){
+            K_length = 10;
+            //-----------------------------------当关键词数量较少时，减小词云区域的高度
+        }else if(0 < authorInfo.Author_Keyword.length && authorInfo.Author_Keyword.length <= 5){
+            keywords_area.css("height","240px");
+        }else if(authorInfo.Author_Keyword.length === 0){
+            keywords_area.css("height","0");
+        }//------------------------------------------高度控制 end
+        var my_keywords = new Array(K_length);
+        for(var i = 0;i < K_length; i++){
+            my_keywords[i] = new Array(2);
+        }
+        for(i = 0;i < K_length; i++){
+            my_keywords[i][0] = ReplaceFirstUper(authorInfo.Author_Keyword[i]);
+            my_keywords[i][1] = 10 - i;
+        }
+
+        var string_ = "";
+        for ( i = 0; i < my_keywords.length; i++) {
+            var string_f = my_keywords[i][0];
+            var string_n = my_keywords[i][1];
+            if(string_f.indexOf("'")>0){
+
+            }else{
+                string_ += "{text: '" + string_f + "', weight: '" + string_n + "',html: {'class': 'span_list'}},";
+            }
+        }
+        var string_list = string_;
+        var word_list = eval("[" + string_list + "]");
+        keywords_area.jQCloud(word_list);
+            setTimeout(function () {
+                $.each(keywords_area.find('.span_list'),function () {
+                    var keyword_now = '';
+                    var keyword_this = $(this).text();
+                    $.each(authorInfo.Author_Keyword,function (n,value) {
+                        if(ReplaceFirstUper(value) == keyword_this){
+                            keyword_now = value;
+                        }
+                    });
+		            var str = '/keywordDetail/?Keyword='+$.base64.encode(encodeURI(keyword_now))+'&Domain_ls='+$.base64.encode(encodeURI(JSON.stringify(domain_ls)));
+                    $(this).html('<a href = "' + str + '">' + $(this).text() + '</a>');
+                });
+
+            },1000);
+    }else {
+        $("#my_keywords").css('height','100px');
+    }
+
+    /*----------关注与取消author---------*/
+    if(authorInfo.If_Atten=='False'){
+        $('.concern_already').hide().siblings().show();
+    }else{
+        $('.concern').hide().siblings().show();
+    }
+    $('.con_box span').on('click',function () {
+        var span_now = $(this);
+        var span_class = span_now.attr("class");
+        alert(span_class);
+        if(span_class == 'send_message'){
+
+        }else{
+            span_now.hide().siblings().show();
+            if(span_class == 'concern_already'){
+                //取消
+            }else{
+                //关注
+            }
+        }
+    });
+    /*-------------author的关注与粉丝------------*/
+    //关注与粉丝的填充
+
+    //关注与粉丝的切换
+    var concern_list = $('.concern_list');
+    var fans_list = $('.fans_list');
+    $(".main_content_head .title").click(function () {
+        if($(".main_content_head .active").text() == $(this).text()){
+            return false;
+        }
+       $(this).siblings().removeClass("active");
+       $(this).addClass("active");
+       if($(this).text() == "TA的关注"){
+            concern_list.show();
+            fans_list.hide();
+        }else if($(this).text() == "TA的粉丝"){
+            concern_list.hide();
+            fans_list.show();
+        }
+    });
+    //关注与取消
+    $('.list_left span').click(function () {
+        var span_now = $(this);
+        var span_class = span_now.attr("class");
+        span_now.hide().siblings().show();
+        if(span_class == 'cancel_con'){
+            //取消
+        }else{
+            //关注
+        }
+    });
+    // 好友关系网，未完
 })

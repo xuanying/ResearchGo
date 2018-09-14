@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>排行榜</title>
+    <link rel="icon" href="./images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/rank.css">
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js/jquery.base64.js"></script>
+    <script src="./js/rank.js"></script>
+    <script src="./js/base.js"></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="topbar_content">
+            <div class="topbar_title">
+                <img src="./images/xnr.jpg">
+                <h1>ResearchGo</h1>
+            </div>
+            <div class="search_box">
+                <form id="search_box" method="post" action="/search/">
+                    <div class="search_input">
+                        <input id="input_con" name="context" class="input" type="text">
+                        <input type="submit" value="Go">
+                    </div>
+                </form>
+            </div>
+            <div class="topbar_user">
+                <span id="user_name"></span>
+                <div id="t_list">
+                    <img class="portrait" src="./images/portrait.png">
+                    <ul class="topbar_list">
+                        <li><a href="">我的主页</a></li>
+                        <li><a href="">我的邮件</a></li>
+                        <li><a href="">分享</a></li>
+                        <li><a href="">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main_content">
+            <section class="rank_head">
+                <div class="r_head">
+                    <h1>排行榜</h1>
+                    <div class="dmanu">
+                        <span class="dmanu_head">领域</span>
+                        <ul class="outside">
+                            <li>
+                                <span>a</span>
+                                <ul class="inside">
+                                    <li>a1</li>
+                                    <li>a2</li>
+                                    <li>a3</li>
+                                    <li>a4</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>b</span>
+                                <ul class="inside">
+                                    <li>b1</li>
+                                    <li>b2</li>
+                                    <li>b3</li>
+                                    <li>b4</li>
+                                    <li>b5</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>c</span>
+                                <ul class="inside">
+                                    <li>c1</li>
+                                    <li>c2</li>
+                                    <li>c3</li>
+                                    <li>c4</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>d</span>
+                                <ul class="inside">
+                                    <li>d1</li>
+                                    <li>d2</li>
+                                    <li>d3</li>
+                                    <li>d4</li>
+                                    <li>d5</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="r_nav">
+                    <ul id="rank_typy">
+                        <li class="rSelected">作者</li>
+                        <li>刊物</li>
+                        <li>机构</li>
+                        <li>关键词</li>
+                        <li>文章</li>
+                        <li>新人</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="rank_box">
+                <table id="tb_auth">
+                    <thead>
+                        <tr>
+                            <th>总排行</th>
+                            <th>年度排行</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                        <td>
+                            <h3 class="rankR"><a href="#">Yang Yang</a></h3>
+                            <div class="item_info">
+                                所属机构：Shanghai Institute of Microsystem and Information Technology Chinese Academy of Sciences
+                            </div>
+                            <div class="item_info">
+                                <span class="high">8</span>
+                                <span class="paper_num">18</span><span class="divide">—</span>
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="rankR"><a href="#">Yang Yang</a></h3>
+                            <div class="item_info">
+                                所属机构：Shanghai Institute of Microsystem and Information Technology Chinese Academy of Sciences
+                            </div>
+                            <div class="item_info">
+                                <span class="high">8</span>
+                                <span class="paper_num">18</span><span class="divide">—</span>
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="rankR"><a href="#">Yang Yang</a></h3>
+                            <div class="item_info">
+                                所属机构：Shanghai Institute of Microsystem and Information Technology Chinese Academy of Sciences
+                            </div>
+                            <div class="item_info">
+                                <span class="high">8</span>
+                                <span class="paper_num">18</span><span class="divide">—</span>
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="rankR"><a href="#">Yang Yang</a></h3>
+                            <div class="item_info">
+                                所属机构：Shanghai Institute of Microsystem and Information Technology Chinese Academy of Sciences
+                            </div>
+                            <div class="item_info">
+                                <span class="high">8</span>
+                                <span class="paper_num">18</span><span class="divide">—</span>
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="rankR"><a href="#">Yang Yang</a></h3>
+                            <div class="item_info">
+                                所属机构：Shanghai Institute of Microsystem and Information Technology Chinese Academy of Sciences
+                            </div>
+                            <div class="item_info">
+                                <span class="high">8</span>
+                                <span class="paper_num">18</span><span class="divide">—</span>
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="rankR"><a href="#">Yang Yang</a></h3>
+                            <div class="item_info">
+                                所属机构：Shanghai Institute of Microsystem and Information Technology Chinese Academy of Sciences
+                            </div>
+                            <div class="item_info">
+                                <span class="high">8</span>
+                                <span class="paper_num">18</span><span class="divide">—</span>
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="rankR"><a href="#">Yang Yang</a></h3>
+                            <div class="item_info">
+                                所属机构：Shanghai Institute of Microsystem and Information Technology Chinese Academy of Sciences
+                            </div>
+                            <div class="item_info">
+                                <span class="high">8</span>
+                                <span class="paper_num">18</span><span class="divide">—</span>
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr> -->
+                    </tbody>
+                </table>
+                <table id="tb_jour" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>总排行</th>
+                            <th>年度排行</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                        <td>
+                           <h3 class="rankA"><a href="#">Journal of the ACM</a></h3>
+                        </td>
+                        <td>
+                            <h3 class="rankB"><a href="#">Journal of the ACM</a></h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <h3 class="rankD"><a href="#">Journal of the ACM</a></h3>
+                        </td>
+                        <td>
+                            <h3 class="rankC"><a href="#">Journal of the ACM</a></h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="rankD"><a href="#">Journal of the ACM</a></h3>
+                        </td>
+                        <td>
+                            <h3 class="rankA"><a href="#">Journal of the ACM</a></h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="rankA"><a href="#">Journal of the ACM</a></h3>
+                        </td>
+                        <td>
+                            <h3 class="rankB"><a href="#">Journal of the ACM</a></h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <h3 class="rankC"><a href="#">Journal of the ACM</a></h3>
+                        </td>
+                        <td>
+                            <h3 class="rankB"><a href="#">Journal of the ACM</a></h3>
+                        </td>
+                    </tr> -->
+                    </tbody>
+                </table>
+                <table id="tb_org" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>总排行</th>
+                            <th>年度排行</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                        <td>
+                            <h3><a href="#">ACM Transactions on Database Systems</a></h3>
+                            <div class="item_info">
+                                国家：United States
+                            </div>
+                        </td>
+                        <td>
+                           <h3><a href="#">ACM Transactions on Database Systems</a></h3>
+                            <div class="item_info">
+                                国家：United States
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3><a href="#">ACM Transactions on Database Systems</a></h3>
+                            <div class="item_info">
+                                国家：United States
+                            </div>
+                        </td>
+                        <td>
+                            <h3><a href="#">ACM Transactions on Database Systems</a></h3>
+                            <div class="item_info">
+                                国家：United States
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3><a href="#">ACM Transactions on Database Systems</a></h3>
+                            <div class="item_info">
+                                国家：United States
+                            </div>
+                        </td>
+                        <td>
+                            <h3><a href="#">ACM Transactions on Database Systems</a></h3>
+                            <div class="item_info">
+                                国家：United States
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3><a href="#">ACM Transactions on Database Systems</a></h3>
+                            <div class="item_info">
+                                国家：United States
+                            </div>
+                        </td>
+                        <td>
+                            <h3><a href="#">ACM Transactions on Database Systems</a></h3>
+                            <div class="item_info">
+                                国家：United States
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3><a href="#">ACM Transactions on Database Systems</a></h3>
+                            <div class="item_info">
+                                国家：United States
+                            </div>
+                        </td>
+                        <td>
+                            <h3><a href="#">ACM Transactions on Database Systems</a></h3>
+                            <div class="item_info">
+                                国家：United States
+                            </div>
+                        </td>
+                    </tr> -->
+                    </tbody>
+                </table>
+                <table id="tb_key" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>总排行</th>
+                            <th>年度排行</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--  <tr>
+                        <td>
+                            <h3><a href="#">Computer Surveillance</a></h3>
+                            <div class="item_info">
+                                作者：<span>Computer Science</span> , <span>Mathematics</span> 
+                            </div>
+                            <div class="item_info">
+                                <span>文章：</span>
+                                <ul>
+                                    <li>Where computer vision needs help from computer science</li>
+                                    <li>Where computer vision needs help from computer science</li>
+                                </ul>
+                            </div>
+                            <div class="item_info">
+                                <span class="high">4</span>
+                                <span class="paper_num">15</span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3><a href="#">Computer Surveillance</a></h3>
+                            <div class="item_info">
+                                作者：<span>Computer Science</span> , <span>Mathematics</span> 
+                            </div>
+                            <div class="item_info">
+                                <span>文章：</span>
+                                <ul>
+                                    <li>Where computer vision needs help from computer science</li>
+                                    <li>Where computer vision needs help from computer science</li>
+                                </ul>
+                            </div>
+                            <div class="item_info">
+                                <span class="high">4</span>
+                                <span class="paper_num">15</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3><a href="#">Computer Surveillance</a></h3>
+                            <div class="item_info">
+                                作者：<span>Computer Science</span> , <span>Mathematics</span> 
+                            </div>
+                            <div class="item_info">
+                                <span>文章：</span>
+                                <ul>
+                                    <li>Where computer vision needs help from computer science</li>
+                                    <li>Where computer vision needs help from computer science</li>
+                                </ul>
+                            </div>
+                            <div class="item_info">
+                                <span class="high">4</span>
+                                <span class="paper_num">15</span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3><a href="#">Computer Surveillance</a></h3>
+                            <div class="item_info">
+                                作者：<span>Computer Science</span> , <span>Mathematics</span> 
+                            </div>
+                            <div class="item_info">
+                                <span>文章：</span>
+                                <ul>
+                                    <li>Where computer vision needs help from computer science</li>
+                                    <li>Where computer vision needs help from computer science</li>
+                                </ul>
+                            </div>
+                            <div class="item_info">
+                                <span class="high">4</span>
+                                <span class="paper_num">15</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3><a href="#">Computer Surveillance</a></h3>
+                            <div class="item_info">
+                                作者：<span>Computer Science</span> , <span>Mathematics</span> 
+                            </div>
+                            <div class="item_info">
+                                <span>文章：</span>
+                                <ul>
+                                    <li>Where computer vision needs help from computer science</li>
+                                    <li>Where computer vision needs help from computer science</li>
+                                </ul>
+                            </div>
+                            <div class="item_info">
+                                <span class="high">4</span>
+                                <span class="paper_num">15</span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3><a href="#">Computer Surveillance</a></h3>
+                            <div class="item_info">
+                                作者：<span>Computer Science</span> , <span>Mathematics</span> 
+                            </div>
+                            <div class="item_info">
+                                <span>文章：</span>
+                                <ul>
+                                    <li>Where computer vision needs help from computer science</li>
+                                    <li>Where computer vision needs help from computer science</li>
+                                </ul>
+                            </div>
+                            <div class="item_info">
+                                <span class="high">4</span>
+                                <span class="paper_num">15</span>
+                            </div>
+                        </td>
+                    </tr> -->
+                    </tbody>
+                </table>
+                <table id="tb_pap" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>总排行</th>
+                            <th>年度排行</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                        <td>
+                            <h3 class="rankA"><a href="#">Where computer vision needs help from computer science</a></h3>
+                            <div class="item_info">
+                                <span class="author">William T. Freeman</span> - <span>2011</span>
+                            </div>
+                            <div class="item_info">
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="rankC"><a href="#">Where computer vision needs help from computer science</a></h3>
+                            <div class="item_info">
+                                <span class="author">William T. Freeman</span> - <span>2011</span>
+                            </div>
+                            <div class="item_info">
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="rankB"><a href="#">Where computer vision needs help from computer science</a></h3>
+                            <div class="item_info">
+                                <span class="author">William T. Freeman</span> - <span>2011</span>
+                            </div>
+                            <div class="item_info">
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="rankD"><a href="#">Where computer vision needs help from computer science</a></h3>
+                            <div class="item_info">
+                                <span class="author">William T. Freeman</span> - <span>2011</span>
+                            </div>
+                            <div class="item_info">
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="rankA"><a href="#">Where computer vision needs help from computer science</a></h3>
+                            <div class="item_info">
+                                <span class="author">William T. Freeman</span> - <span>2011</span>
+                            </div>
+                            <div class="item_info">
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="rankB"><a href="#">Where computer vision needs help from computer science</a></h3>
+                            <div class="item_info">
+                                <span class="author">William T. Freeman</span> - <span>2011</span>
+                            </div>
+                            <div class="item_info">
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="rankC"><a href="#">Where computer vision needs help from computer science</a></h3>
+                            <div class="item_info">
+                                <span class="author">William T. Freeman</span> - <span>2011</span>
+                            </div>
+                            <div class="item_info">
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="rankD"><a href="#">Where computer vision needs help from computer science</a></h3>
+                            <div class="item_info">
+                                <span class="author">William T. Freeman</span> - <span>2011</span>
+                            </div>
+                            <div class="item_info">
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                    </tr> -->
+                    </tbody>
+                </table>
+                <table id="tb_nauth" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>总排行</th>
+                            <th>年度排行</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                        <td>
+                            <h3 class="rankR"><a href="#">Yang Yang</a></h3>
+                            <div class="item_info">
+                                所属机构：Shanghai Institute of Microsystem and Information Technology Chinese Academy of Sciences
+                            </div>
+                            <div class="item_info">
+                                <span class="high">8</span>
+                                <span class="paper_num">18</span><span class="divide">—</span>
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="rankR"><a href="#">Yang Yang</a></h3>
+                            <div class="item_info">
+                                所属机构：Shanghai Institute of Microsystem and Information Technology Chinese Academy of Sciences
+                            </div>
+                            <div class="item_info">
+                                <span class="high">8</span>
+                                <span class="paper_num">18</span><span class="divide">—</span>
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="rankR"><a href="#">Yang Yang</a></h3>
+                            <div class="item_info">
+                                所属机构：Shanghai Institute of Microsystem and Information Technology Chinese Academy of Sciences
+                            </div>
+                            <div class="item_info">
+                                <span class="high">8</span>
+                                <span class="paper_num">18</span><span class="divide">—</span>
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="rankR"><a href="#">Yang Yang</a></h3>
+                            <div class="item_info">
+                                所属机构：Shanghai Institute of Microsystem and Information Technology Chinese Academy of Sciences
+                            </div>
+                            <div class="item_info">
+                                <span class="high">8</span>
+                                <span class="paper_num">18</span><span class="divide">—</span>
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="rankR"><a href="#">Yang Yang</a></h3>
+                            <div class="item_info">
+                                所属机构：Shanghai Institute of Microsystem and Information Technology Chinese Academy of Sciences
+                            </div>
+                            <div class="item_info">
+                                <span class="high">8</span>
+                                <span class="paper_num">18</span><span class="divide">—</span>
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="rankR"><a href="#">Yang Yang</a></h3>
+                            <div class="item_info">
+                                所属机构：Shanghai Institute of Microsystem and Information Technology Chinese Academy of Sciences
+                            </div>
+                            <div class="item_info">
+                                <span class="high">8</span>
+                                <span class="paper_num">18</span><span class="divide">—</span>
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="rankR"><a href="#">Yang Yang</a></h3>
+                            <div class="item_info">
+                                所属机构：Shanghai Institute of Microsystem and Information Technology Chinese Academy of Sciences
+                            </div>
+                            <div class="item_info">
+                                <span class="high">8</span>
+                                <span class="paper_num">18</span><span class="divide">—</span>
+                                <span class="high_cite">2</span>
+                                <span class="cite">6</span>
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                    </tr> -->
+                    </tbody>
+                </table>
+            </section>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!--  <footer class="footer">
+        <div class="footer_content"></div>
+    </footer> -->
+</body>
+
+</html>

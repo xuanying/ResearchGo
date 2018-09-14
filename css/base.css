@@ -196,3 +196,108 @@ button,input{
     line-height: 35px;
     text-align: center;
 }
+/*--等级显示--*/
+.rankA{
+    padding-left: 35px;
+    background: url('../images/A.png') no-repeat left top;
+    background-size: 31px;
+}
+.rankB{
+    padding-left: 35px;
+    background: url('../images/B.png') no-repeat left top;
+    background-size: 31px;
+}
+.rankC{
+    padding-left: 35px;
+    background: url('../images/C.png') no-repeat left top;
+    background-size: 31px;
+}
+.rankD{
+    padding-left: 35px;
+    background: url('../images/D.png') no-repeat left top;
+    background-size: 31px;
+}
+.rankR{
+    padding-left: 37px;
+    background: url('../images/R0.png') no-repeat left top;
+    background-position: 0px -2px;
+    background-size: 35px;
+}
+.high{
+    background: url('../images/high.png') no-repeat left top;
+    background-size: 20px;
+    padding-left: 25px;
+    color: #ebb15e;
+    padding-right: 15px;
+    border-right: 1px solid #c2c2c2;
+    font-size: 0.9em;
+    line-height: 35px;
+}
+.high_cite{
+    background: url('../images/high_cite.png') no-repeat left top;
+    background-size: 21px;
+    padding-left: 25px;
+    color: #ebb15e;
+    padding-right: 15px;
+    border-right: 1px solid #c2c2c2;
+    font-size: 0.9em;
+    line-height: 35px;
+}
+.paper_num{
+    background: url('../images/paper.png') no-repeat left center;
+    background-size: 21px;
+    padding-left: 25px;
+    color: #ebb15e;
+    margin-left: 10px;
+    font-size: 0.9em;
+    line-height: 35px;
+}
+.cite{
+    background: url('../images/cite.png') no-repeat left center;
+    background-size: 19px;
+    padding-left: 25px;
+    color: #ebb15e;
+    margin-left: 10px;
+    font-size: 0.9em;
+    line-height: 35px;
+}
+.divide{
+    color: #676767;
+    padding-left: 10px;
+    padding-right: 5px;
+    font-size: 1.1em;
+    line-height: 35px;
+    text-align: center;
+}
+/*收藏按钮*/
+.collection{
+    float: left;
+    border: 1px solid #cecece;
+    padding: 5px 5px 5px 20px;
+    border-radius: 3px;
+    box-shadow: #bababa 0 0 1px;
+    font-size: 0.8em;
+    color: #696969;
+    background: url('../images/collection.png') 10% 50% no-repeat;
+    background-size: 15px 15px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+/*--------footer-------*/
+.footer{
+    width: 100%;
+    height: 100px;
+    background-color: #f8f8f8;
+    float: left;
+    border-top: 1px solid #dddddd;
+}
+.footer_content{
+    width: 1000px;
+    height: 100px;
+    background-color: #f8f8f8;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>期刊详情</title>
+    <link rel="icon" href="./images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/journaDetail.css">
+    <link rel="stylesheet" href="./css/cypager.min.css">
+    <link rel="stylesheet" href="./css/jqcloud.css">
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js/jqcloud-1.0.4.js"></script>
+    <script src="./js/cypager.min.js"></script>
+    <script src="./js/highcharts.js"></script>
+    <script src="./js/jquery.base64.js"></script>
+    <script src="./js/journaDetail.js"></script>
+    <script src="./js/base.js"></script>
+
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="topbar_content">
+            <div class="topbar_title">
+                <img src="./images/xnr.jpg">
+                <h1>ResearchGo</h1>
+            </div>
+            <div class="search_box">
+                <form id="search_box" method="post" action="/search/">
+                    <div class="search_input">
+                        <input id="input_con" name="context" class="input" type="text">
+                        <input type="submit" value="Go">
+                    </div>
+                </form>
+            </div>
+            <div class="topbar_user">
+                <span id="user_name"></span>
+                <div id="t_list">
+                    <img class="portrait" src="./images/portrait.png">
+                    <ul class="topbar_list">
+                        <li><a href="/kennel/">我的主页</a></li>
+                        <li><a href="/email/">我的邮件</a></li>
+                        <li><a href="">分享</a></li>
+                        <li><a href="/logout/">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+            <div class="main_content">
+                <div class="journal_base_info">
+                    <section class="journal_header">
+                        <div class="journal_title">
+                            <button class="collection" type="button" name="CollectionFalse">收藏</button>
+                            <h2></h2>
+                        </div>
+                    </section>
+                    <section class="journal_level">
+                        <h2>期刊等级</h2>
+                        <div class="detail_message">
+                            <!-- <p>1877-0509</p> -->
+                            <p>A</p>
+                        </div>
+                    </section>
+                    <section class="journal_ISSN">
+                        <h2>ISSN</h2>
+                        <div class="detail_message">
+                            <!-- <p>1877-0509</p> -->
+                            <p></p>
+                        </div>
+                    </section>
+                    <section class="journal_factor">
+                        <h2>影响因子</h2>
+                        <div class="detail_message">
+                            <!-- <p>144.800</p> -->
+                            <p></p>
+                        </div>
+                    </section>
+                </div>
+                <div class="line_chart">
+                    <h2>近五年文章数</h2>
+                    <div class="detail_message" id="hot_canvasDiv"></div>
+                </div>
+                <div class="journal_keyword">
+                    <header class="main_content_head">
+                        <h2 class="title active">热门关键词</h2>
+                        <h2 class="title" style="left: -12px">潜力关键词</h2>
+                    </header>
+                    <div id="hot_keywords">
+                    </div>
+                    <div id="potential_keywords" >
+                    </div>
+                </div>
+                <div class="jour_auth">
+                    <header class="main_content_head">
+                        <h2 class="title active">知名学者</h2>
+                    </header>
+                    <ul>
+                       <!--  <li><span class="num">1</span><a href="#" class="word_list">Dacheng Tao</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <footer class="footer">
+            <div class="footer_content"></div>
+        </footer>
+        <div class="clear"></div>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组织详情</title>
+    <link rel="icon" href="./images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/orgDetail.css">
+    <link rel="stylesheet" href="./css/jqcloud.css">
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js/highcharts.js"></script>
+    <script src="./js/jqcloud-1.0.4.js"></script>
+    <script src="./js/jquery.base64.js"></script>
+    <script src="./js/orgDetail.js"></script>
+    <script src="./js/base.js"></script>
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar_content">
+            <div class="topbar_title">
+                <img src="./images/xnr.jpg">
+                <h1>ResearchGo</h1>
+            </div>
+            <div class="search_box">
+                <form id="search_box" method="post" action="/search/">
+                    <div class="search_input">
+                        <input id="input_con" name="context" class="input" type="text">
+                        <input type="submit" value="Go">
+                    </div>
+                </form>
+            </div>
+            <div class="topbar_user">
+                <span id="user_name"></span>
+                <div id="t_list">
+                    <img class="portrait" src="./images/portrait.png">
+                    <ul class="topbar_list">
+                        <li><a href="/kennel/">我的主页</a></li>
+                        <li><a href="/email/">我的邮件</a></li>
+                        <li><a href="">分享</a></li>
+                        <li><a href="/logout/">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+            <div class="main_content">
+                <div class="organization_messages">
+                    <header class="org_logo_name">
+                        <h1>
+                           <!--  <img src="img/org_logo.jpg">
+                            University of California System -->
+                        </h1>
+                    </header>
+                    <button class="collection" type="button" name="CollectionFalse">收藏</button>
+                    <section class="org_part_message">
+                        <h2>国家与地区</h2>
+                        <div class="detail_message" id="org_country"></div>
+                    </section>
+                    <section class="org_part_message">
+                        <h2>文章数趋势</h2>
+                        <div class="detail_message" id="hot_canvasDiv"></div>
+                    </section>
+                    <section class="org_part_message" id="org_domain">
+                        <h2>研究领域</h2>
+                        <div class="detail_message">
+                            <ul id="org_domain">
+                                <!-- <li class="active">COMPUTER SCIENCE</li>
+                                <li>COMPUTER SCIENCE</li>
+                                <li>COMPUTER SCIENCE</li>
+                                <li>COMPUTER SCIENCE</li>
+                                <li>AUTOMATION & CONTROL SYSTEMS</li>
+                                <li>ENGINEERING</li>
+                                <li>TELECOMMUNICATIONS</li> -->
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="org_part_message" id="masters">
+                        <h2>知名学者</h2>
+                        <div class="detail_message">
+                            <!--<h3>COMPUTER SCIENCE, INFORMATION SYSTEMS</h3>-->
+                            <ul id="org_scholar">
+                                <!-- <li><a href="#">O'Boyle,NoelM</a></li>
+                                <li><a href="#">Banck,Michael</a></li>
+                                <li><a href="#">James,CraigA</a></li>
+                                <li><a href="#">Morley,Chris</a></li>
+                                <li><a href="#">Vandermeersch,Tim</a></li>
+                                <li><a href="#">Hutchison,GeoffreyR</a></li> -->
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="org_part_message" id="hot_words">
+                        <h2>热门关键词</h2>
+                        <div class="detail_message">
+                            <ul id="org_keyword">
+                                <!-- <li><a href="#">Cloud computing</a></li>
+                                <li><a href="#">Artificial intelligence</a></li>
+                                <li><a href="#">Theory</a></li>
+                                <li><a href="#">face recognition</a></li>
+                                <li><a href="#">DATABASES</a></li>
+                                <li><a href="#">Compressive sensing</a></li> -->
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="org_part_message" id="org_rank" >
+                        <h2>世界排名</h2>
+                        <div class="detail_message" id="r_world"></div>
+                        <h2>全国排名</h2>
+                        <div class="detail_message" id="r_country"></div>
+                    </section>
+                </div><!--organization_messages end-->
+            </div><!--main_content end-->
+        </div><!--main end-->
+    
+        <footer class="footer">
+            <div class="footer_content"></div>
+        </footer>
+</body>
+</html>

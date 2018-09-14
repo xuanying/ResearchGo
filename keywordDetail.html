@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关键词</title>
+    <link rel="icon" href="./images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/keywordDetail.css">
+    <link rel="stylesheet" href="./css/cypager.min.css">
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js/cypager.min.js"></script>
+    <script src="./js/jquery.base64.js"></script>
+    <script src="./js/highcharts.js"></script>
+    <script src="./js/keywordDetail.js"></script>
+    <script src="./js/base.js"></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="topbar_content">
+            <div class="topbar_title">
+                <img src="./images/xnr.jpg">
+                <h1>ResearchGo</h1>
+            </div>
+            <div class="search_box">
+                <form id="search_box" method="post" action="/search/">
+                    <div class="search_input">
+                        <input id="input_con" name="context" class="input" type="text">
+                        <input type="submit" value="Go">
+                    </div>
+                </form>
+            </div>
+            <div class="topbar_user">
+                <span id="user_name"></span>
+                <div id="t_list">
+                    <img class="portrait" src="./images/portrait.png">
+                    <ul class="topbar_list">
+                        <li><a href="/kennel/">我的主页</a></li>
+                        <li><a href="/email/">我的邮件</a></li>
+                        <li><a href="">分享</a></li>
+                        <li><a href="/logout/">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main_content">
+            <div class="keyword_messages">
+                <button class="collection" type="button" name="CollectionFalse">收藏</button>
+                <h1></h1>
+                <section class="basic_informations">
+                    <section class="zhu_chart">
+                        <h2>热度柱状图</h2>
+                        <div id="container"></div>
+                    </section>
+                    <section class="fields">
+                        <h2>领域</h2>
+                        <div class="detail_message">
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="masters">
+                        <h2>作者列表</h2>
+                        <div class="detail_message">
+                            <ul></ul>
+                        </div>
+                    </section>
+                </section>
+                <section class="article_list">
+                    <header class="introduction_head">
+                        <h2 class="title">文章列表</h2>
+                        <ul>
+                            <li id="time_ordering" class="active">按时间排列</li>
+                            <li id="level_ordering">按档次排列</li>
+                        </ul>
+                    </header>
+                    <div class="wait_data" style="text-align: center;display: inline-block;float: right;font-size: 0.8em">正在加载……</div>
+                    <div class="articlelists">
+                        <ul class="new_list">
+                            <!-- <li>
+                                 <h3><span class="ar_year">2017</span><a href="#">A Novel Pattern Clustering Algorithm Based on Particle Swarm Optimization Joint Adaptive Wavelet Neural Network Model</a></h3>
+                                 <p class="ar_author"> <a>Shoubao Su(R5)</a>;<a>Haifeng Guo(R5)</a>;<a>Haimei Tian(R5)</a>;<a>Gang Wu(R5)</a></p>
+                                 <p class="ar_jour"><a>MOBILE NETWORKS & APPLICATIONS(C)</a></p>
+                                 <p class="ar_domain">领域：<span>Computer Science(all) ;Hardware and Architecture ;Computer Networks and Communications ;Information Systems ;Software ;</span></p>
+                                 <p class="ar_level">档次：<span>C</span></p>
+                                 <div class="item_info">
+                                    <span class="high">2</span>
+                                    <span class="cite">6</span>
+                                 </div>
+                             </li>
+                             <li>
+                                 <h3><span class="ar_year">2017</span><a href="#">A Novel Pattern Clustering Algorithm Based on Particle Swarm Optimization Joint Adaptive Wavelet Neural Network Model</a></h3>
+                                 <p class="ar_author"> <a>Shoubao Su(R5)</a>;<a>Haifeng Guo(R5)</a>;<a>Haimei Tian(R5)</a>;<a>Gang Wu(R5)</a></p>
+                                 <p class="ar_jour"><a>MOBILE NETWORKS & APPLICATIONS(C)</a></p>
+                                 <p class="ar_domain">领域：<span>Computer Science(all) ;Hardware and Architecture ;Computer Networks and Communications ;Information Systems ;Software ;</span></p>
+                                 <p class="ar_level">档次：<span>C</span></p>
+                                 <div class="item_info">
+                                    <span class="high">2</span>
+                                    <span class="cite">6</span>
+                                 </div>
+                             </li>
+                             <li>
+                                 <h3><span class="ar_year">2017</span><a href="#">A Novel Pattern Clustering Algorithm Based on Particle Swarm Optimization Joint Adaptive Wavelet Neural Network Model</a></h3>
+                                 <p class="ar_author"> <a>Shoubao Su(R5)</a>;<a>Haifeng Guo(R5)</a>;<a>Haimei Tian(R5)</a>;<a>Gang Wu(R5)</a></p>
+                                 <p class="ar_jour"><a>MOBILE NETWORKS & APPLICATIONS(C)</a></p>
+                                 <p class="ar_domain">领域：<span>Computer Science(all) ;Hardware and Architecture ;Computer Networks and Communications ;Information Systems ;Software ;</span></p>
+                                 <p class="ar_level">档次：<span>C</span></p>
+                                 <div class="item_info">
+                                    <span class="high">2</span>
+                                    <span class="cite">6</span>
+                                 </div>
+                             </li>
+                             <li>
+                                 <h3><span class="ar_year">2017</span><a href="#">A Novel Pattern Clustering Algorithm Based on Particle Swarm Optimization Joint Adaptive Wavelet Neural Network Model</a></h3>
+                                 <p class="ar_author"> <a>Shoubao Su(R5)</a>;<a>Haifeng Guo(R5)</a>;<a>Haimei Tian(R5)</a>;<a>Gang Wu(R5)</a></p>
+                                 <p class="ar_jour"><a>MOBILE NETWORKS & APPLICATIONS(C)</a></p>
+                                 <p class="ar_domain">领域：<span>Computer Science(all) ;Hardware and Architecture ;Computer Networks and Communications ;Information Systems ;Software ;</span></p>
+                                 <p class="ar_level">档次：<span>C</span></p>
+                                 <div class="item_info">
+                                    <span class="high">2</span>
+                                    <span class="cite">6</span>
+                                 </div>
+                             </li>
+                             <li>
+                                 <h3><span class="ar_year">2017</span><a href="#">A Novel Pattern Clustering Algorithm Based on Particle Swarm Optimization Joint Adaptive Wavelet Neural Network Model</a></h3>
+                                 <p class="ar_author"> <a>Shoubao Su(R5)</a>;<a>Haifeng Guo(R5)</a>;<a>Haimei Tian(R5)</a>;<a>Gang Wu(R5)</a></p>
+                                 <p class="ar_jour"><a>MOBILE NETWORKS & APPLICATIONS(C)</a></p>
+                                 <p class="ar_domain">领域：<span>Computer Science(all) ;Hardware and Architecture ;Computer Networks and Communications ;Information Systems ;Software ;</span></p>
+                                 <p class="ar_level">档次：<span>C</span></p>
+                                 <div class="item_info">
+                                    <span class="high">2</span>
+                                    <span class="cite">6</span>
+                                 </div>
+                             </li> -->
+                        </ul>
+                    </div>
+                    <div class="moreinformation" id="pagerArea" style="-moz-user-select:none;"></div>
+                    <div class="wait_data" style="text-align: center;margin-top: 10px">正在加载……</div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" style="display: none">
+        <div class="footer_content"></div>
+    </footer>
+</body>
+
+</html>

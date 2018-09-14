@@ -9,3 +9,11 @@ img{
 .second{
     top:300px;
 }
+#jqcloud{
+    height: 300px;
+    width: 100%;
+}
+#jqcloud .span_list{
+    line-height: 50px;
+    font-size: 40px;
+}

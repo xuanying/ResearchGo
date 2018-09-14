@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文章详情</title>
+    <link rel="icon" href="./images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/cypager.min.css">
+    <link rel="stylesheet" href="./css/articleDetail.css">
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js/cypager.min.js"></script>
+    <script src="./js/articleDetail.js"></script>
+    <script src="./js/highcharts.js"></script>
+    <script src="./js/jquery.base64.js"></script>
+    <script src="./js/base.js"></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="topbar_content">
+            <div class="topbar_title">
+                <img src="./images/xnr.jpg">
+                <h1>ResearchGo</h1>
+            </div>
+            <div class="search_box">
+                <form id="search_box" method="post" action="/search/">
+                    <div class="search_input">
+                        <input id="input_con" name="context" class="input" type="text">
+                        <input type="submit" value="Go">
+                    </div>
+                </form>
+            </div>
+            <div class="topbar_user">
+                <span id="user_name"></span>
+                <div id="t_list">
+                    <img class="portrait" src="./images/portrait.png">
+                    <ul class="topbar_list">
+                        <li><a href="/kennel/">我的主页</a></li>
+                        <li><a href="/email/">我的邮件</a></li>
+                        <li><a href="">分享</a></li>
+                        <li><a href="/logout/">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main_content">
+            <div class="article_messages">
+                <button class="collection" type="button" name="CollectionFalse">收藏</button>
+                <h1></h1>
+                <section class="journal_header">
+                    <!-- <div class="journal_logo"><img src="img/SCIENCE.gif" alt=""></div> -->
+                    <!-- <h2>SCIENCE</h2> -->
+                    <div class="journal_title">
+                        <h2></h2>
+                    </div>
+                </section>
+                <section class="basic_informations">
+                    <section class="authors">
+                        <h2>作者</h2>
+                        <div class="detail_message">
+                            <ul>
+                                <!--<li><a href="#">Asakawa, Deanna S.</a></li>-->
+                                <!--<li><a href="#">Dennerlein, Jack T.</a></li>-->
+                                <!--<li><a href="#">Jindrich, Devin L.</a></li>-->
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="year">
+                        <h2>年份</h2>
+                        <div class="detail_message">
+                            <p></p>
+                        </div>
+                    </section>
+                    <section class="abstract">
+                        <h2>摘要</h2>
+                        <div class="detail_message">
+                            <p>
+                                <!--This study aimed to quantify differences in 7 touchscreen gestures. Eighteen participants performed index finger tapping, sliding in 4 orthogonal directions, and index finger and thumb pinch and stretch gestures on a touchscreen tablet computer. We hypothesized that two finger gestures would require longer task completion time and greater finger joint excursions than sliding gestures using only the index finger. We measured task completion times and finger joint kinematics. Tapping showed the fastest average (+/- SD) task completion time, 567(190) ms, of all gestures (p < 0.001). Pinch had faster task completion time, 765(277) ms, than all single-finger sliding gestures (p < 0.001). Stretch was faster to complete at 843(317) ms (p < 0.001) than all sliding gestures except slide right. Stretch demonstrated greater mean index finger metacarpophalangeal flexion/extension joint excursions, 63(16)degrees, compared to sliding gestures, 34(10)degrees, and tapping, 27(13)degrees (p < 0.01). Overall, two-finger gestures were faster to complete and showed greater joint excursions than single-finger sliding gestures. (C) 2016 Elsevier Ltd. All rights reserved.-->
+                                <span id="abstract_content"></span>
+                                <span id="abstract_more"></span>
+                            </p>
+
+                        </div>
+                    </section>
+                    <section class="keywords">
+                        <h2>关键词</h2>
+                        <div class="detail_message">
+                            <ul>
+                                <!--<li><a href="#">Asakawa, Deanna S.</a></li>-->
+                                <!--<li><a href="#">Dennerlein, Jack T.</a></li>-->
+                                <!--<li><a href="#">Jindrich, Devin L.</a></li>-->
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="fields">
+                        <h2>领域及档次</h2>
+                        <div class="detail_message">
+                            <ul>
+                                <!--<li>ACOUSTICS(A)</li>-->
+                                <!--<li>ASTRONOMY ASTROPHYSICS(C)</li>-->
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="journal">
+                        <h2>所属刊物</h2>
+                        <div class="detail_message">
+                            <p>
+                                <!--IEEE Transactions On Computer-Aided Design Of Integrated Circuits And System(TCAD)-->
+                            </p>
+                        </div>
+                    </section>
+                    <section class="line_chart">
+                        <h2>被引趋势</h2>
+                        <div class="detail_message" id="hot_canvasDiv"></div>
+                    </section>
+                </section>
+                <section class="article_list">
+                    <header class="introduction_head">
+                        <h2 class="title">文章列表</h2>
+                        <ul>
+                            <li id="time_ordering" class="active">按时间排列</li>
+                            <li id="level_ordering">按档次排列</li>
+                        </ul>
+                    </header>
+                    <div class="paper_type">
+                        <a href="#" class="type_button" id="Ref" type="button">参考文献</a>
+                        <a href="#" class="type_button" id="Cite" type="button">引证文献</a>
+                    </div>
+                    <div class="articlelists">
+                        <ul class="new_list">
+                            <!-- <li>
+                                             <h3><span class="ar_year">2017</span><a href="#">A Novel Pattern Clustering Algorithm Based on Particle Swarm Optimization Joint Adaptive Wavelet Neural Network Model</a></h3>
+                                             <p class="ar_author"> <a>Shoubao Su(R5)</a>;<a>Haifeng Guo(R5)</a>;<a>Haimei Tian(R5)</a>;<a>Gang Wu(R5)</a></p>
+                                             <p class="ar_jour"><a>MOBILE NETWORKS & APPLICATIONS(C)</a></p>
+                                             <p class="ar_domain">领域：<span>Computer Science(all) ;Hardware and Architecture ;Computer Networks and Communications ;Information Systems ;Software ;</span></p>
+                                             <p class="ar_level">档次：<span>C</span></p>
+                                             <div class="item_info">
+                                                <span class="high">2</span>
+                                                <span class="cite">6</span>
+                                             </div>
+                                         </li>
+                                         <li>
+                                             <h3><span class="ar_year">2017</span><a href="#">A Novel Pattern Clustering Algorithm Based on Particle Swarm Optimization Joint Adaptive Wavelet Neural Network Model</a></h3>
+                                             <p class="ar_author"> <a>Shoubao Su(R5)</a>;<a>Haifeng Guo(R5)</a>;<a>Haimei Tian(R5)</a>;<a>Gang Wu(R5)</a></p>
+                                             <p class="ar_jour"><a>MOBILE NETWORKS & APPLICATIONS(C)</a></p>
+                                             <p class="ar_domain">领域：<span>Computer Science(all) ;Hardware and Architecture ;Computer Networks and Communications ;Information Systems ;Software ;</span></p>
+                                             <p class="ar_level">档次：<span>C</span></p>
+                                             <div class="item_info">
+                                                <span class="high">2</span>
+                                                <span class="cite">6</span>
+                                             </div>
+                                         </li>
+                                         <li>
+                                             <h3><span class="ar_year">2017</span><a href="#">A Novel Pattern Clustering Algorithm Based on Particle Swarm Optimization Joint Adaptive Wavelet Neural Network Model</a></h3>
+                                             <p class="ar_author"> <a>Shoubao Su(R5)</a>;<a>Haifeng Guo(R5)</a>;<a>Haimei Tian(R5)</a>;<a>Gang Wu(R5)</a></p>
+                                             <p class="ar_jour"><a>MOBILE NETWORKS & APPLICATIONS(C)</a></p>
+                                             <p class="ar_domain">领域：<span>Computer Science(all) ;Hardware and Architecture ;Computer Networks and Communications ;Information Systems ;Software ;</span></p>
+                                             <p class="ar_level">档次：<span>C</span></p>
+                                             <div class="item_info">
+                                                <span class="high">2</span>
+                                                <span class="cite">6</span>
+                                             </div>
+                                         </li>
+                                         <li>
+                                             <h3><span class="ar_year">2017</span><a href="#">A Novel Pattern Clustering Algorithm Based on Particle Swarm Optimization Joint Adaptive Wavelet Neural Network Model</a></h3>
+                                             <p class="ar_author"> <a>Shoubao Su(R5)</a>;<a>Haifeng Guo(R5)</a>;<a>Haimei Tian(R5)</a>;<a>Gang Wu(R5)</a></p>
+                                             <p class="ar_jour"><a>MOBILE NETWORKS & APPLICATIONS(C)</a></p>
+                                             <p class="ar_domain">领域：<span>Computer Science(all) ;Hardware and Architecture ;Computer Networks and Communications ;Information Systems ;Software ;</span></p>
+                                             <p class="ar_level">档次：<span>C</span></p>
+                                             <div class="item_info">
+                                                <span class="high">2</span>
+                                                <span class="cite">6</span>
+                                             </div>
+                                         </li>
+                                         <li>
+                                             <h3><span class="ar_year">2017</span><a href="#">A Novel Pattern Clustering Algorithm Based on Particle Swarm Optimization Joint Adaptive Wavelet Neural Network Model</a></h3>
+                                             <p class="ar_author"> <a>Shoubao Su(R5)</a>;<a>Haifeng Guo(R5)</a>;<a>Haimei Tian(R5)</a>;<a>Gang Wu(R5)</a></p>
+                                             <p class="ar_jour"><a>MOBILE NETWORKS & APPLICATIONS(C)</a></p>
+                                             <p class="ar_domain">领域：<span>Computer Science(all) ;Hardware and Architecture ;Computer Networks and Communications ;Information Systems ;Software ;</span></p>
+                                             <p class="ar_level">档次：<span>C</span></p>
+                                             <div class="item_info">
+                                                <span class="high">2</span>
+                                                <span class="cite">6</span>
+                                             </div>
+                                         </li>
+                                     </ul> -->
+                    </div>
+                    <div class="moreinformation" id="pagerArea" style="-moz-user-select:none;"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer_content"></div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>验证邮箱</title>
+    <link rel="icon" href="./images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/vertifyEmail.css">
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js/vertifyEmail.js"></script>
+</head>
+<body>
+    <header class="first_head">
+        <div class="head_content">
+            <h1>验证您的邮箱</h1>
+            <h2>您的以下邮箱将会收到来至ResearchGo的验证邮件，请选择。</h2>
+        </div>
+    </header>
+	<div class="content">
+		<form id="email_form" class="form_content" method="post">
+			<fieldset>
+				<legend>需要验证的邮箱列表</legend>
+				<p><label class="hint">带*为必选项</label></p>
+				<div class="form_group" id="fg0">
+					<span class="necessary">主要邮箱：</span><label></label><img class="checkSign" src="/static/img/check.png" alt="">
+				</div>
+				<div class="form_group">
+					<span></span>
+					<input  id="submit" class="btn_submit" type="button" value="提交"/>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

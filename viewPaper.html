@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我要看新文章</title>
+    <link rel="icon" href="./images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/viewPaper.css">
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js/jquery.base64.js"></script>
+    <script src="./js/base.js"></script>
+    <script src="./js/viewPaper.js"></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="topbar_content">
+            <div class="topbar_title">
+                <img src="./images/xnr.jpg">
+                <h1>ResearchGo</h1>
+            </div>
+            <div class="search_box">
+                <form id="search_box" method="post" action="/search/">
+                    <div class="search_input">
+                        <input id="input_con" name="context" class="input" type="text">
+                        <input type="submit" value="Go">
+                    </div>
+                </form>
+            </div>
+            <div class="topbar_user">
+                <span id="user_name"></span>
+                <div id="t_list">
+                    <img class="portrait" src="./images/portrait.png">
+                    <ul class="topbar_list">
+                        <li><a href="">我的主页</a></li>
+                        <li><a href="">我的邮件</a></li>
+                        <li><a href="">分享</a></li>
+                        <li><a href="">退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+            <div class="main_content">
+                <section class="list_head">
+                    <span>筛选</span>
+                    <div class="filter_div">
+                        <input id="list_filter" name="filter" class="input" type="text">
+                        <input type="button" value="">
+                    </div>
+                    <span id="change_word">换一批</span>
+                </section>
+                <section class="result_box">
+                    <!-- <div class="re_block">
+                        <span class="se_year">2017</span>
+                        <h1><a href="">Is bottom-up attention useful for object recognitionattention useful for object recognition attention useful for object recognition?</a></h1>
+                        <p class="se_author"><a href="">Ueli Rutishauser(R1)</a>,<a href="">Peter Johnson(R1)</a>,<a href="">Ah Li(R0)</a></p>
+                        <p class="se_jour"><a href="">Proceedings of International Conference(A)</a></p>
+                        <p class="se_abs"><span class="se_type">摘要</span>A key problem in learning multiple objects from unlabeled images is that it is a priori impossible to tell which part of the image corresponds to each...<span class="abs_more">(More)</span></p>
+                        <div class="se_relate" title="与我相关">
+                            <img src="./images/about.png">
+                            <p class="re_keyword"><span>Mobile Network(medium)</span>,<span>Sensing(weak)</span></p>
+                            <p class="re_author"><span>Ming Liu(medium)</span></p>
+                        </div>
+                    </div>
+                    <div class="re_block">
+                        <span class="se_year">2017</span>
+                        <h1><a href="">Is bottom-up attention useful for object recognition?</a></h1>
+                        <p class="se_author"><a href="">Ueli Rutishauser(R1)</a>,<a href="">Peter Johnson(R1)</a>,<a href="">Ah Li(R0)</a></p>
+                        <p class="se_jour"><a href="">Proceedings of International Conference(A)</a></p>
+                        <p class="se_abs"><span class="se_type">摘要</span>A key problem in learning multiple objects from unlabeled images is that it is a priori impossible to tell which part of the image corresponds to each...<span class="abs_more">(More)</span></p>
+                        <div class="se_relate" title="与我相关">
+                            <img src="./images/about.png">
+                            <p class="re_keyword"><span>Mobile Network(medium)</span>,<span>Sensing(weak)</span></p>
+                            <p class="re_author"><span>Ming Liu(medium)</span></p>
+                        </div>
+                    </div>
+                    <div class="re_block">
+                        <span class="se_year">2017</span>
+                        <h1><a href="">Is bottom-up attention useful for object recognition?</a></h1>
+                        <p class="se_author"><a href="">Ueli Rutishauser(R1)</a>,<a href="">Peter Johnson(R1)</a>,<a href="">Ah Li(R0)</a></p>
+                        <p class="se_jour"><a href="">Proceedings of International Conference(A)</a></p>
+                        <p class="se_abs"><span class="se_type">摘要</span>A key problem in learning multiple objects from unlabeled images is that it is a priori impossible to tell which part of the image corresponds to each...<span class="abs_more">(More)</span></p>
+                        <div class="se_relate" title="与我相关">
+                            <img src="./images/about.png">
+                            <p class="re_keyword"><span>Mobile Network(medium)</span>,<span>Sensing(weak)</span></p>
+                            <p class="re_author"><span>Ming Liu(medium)</span></p>
+                        </div>
+                    </div> -->
+                </section>
+                <div class="clear"></div>
+            </div>
+        </div>
+    
+       <!--  <footer class="footer">
+            <div class="footer_content"></div>
+        </footer> -->
+</body>
+
+</html>
