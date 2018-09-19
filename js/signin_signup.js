@@ -1,5 +1,4 @@
 $(function () {
-
     var wrapper = $('.wrapper');
     var main_page = wrapper.find('.main_page');
     var pageNum = main_page.length;

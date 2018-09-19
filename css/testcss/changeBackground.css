@@ -17,3 +17,15 @@ img{
     line-height: 50px;
     font-size: 40px;
 }
+.forOutline{
+    height: 45px;
+    width: 500px;
+    outline: none;
+    background: #2caeb6;
+    border-radius: 3px;
+}
+button::-moz-focus-inner {
+
+    border: 0;
+    
+    }

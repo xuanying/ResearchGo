@@ -343,6 +343,14 @@ img.img_x {
     background: #2caeb6;
     border-radius: 3px;
 }
+/* button::-moz-focus-inner{
+    border: 0;
+} */
+#window .button:focus,#window .button:active{
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
 #window .perspective label{
     color: #fff;
     float: right;

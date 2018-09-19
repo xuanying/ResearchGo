@@ -9,12 +9,12 @@ $(function () {
 
     /*------input框focus------*/
     $('#input_con').focus(function () {
-        $('.search_input').css('border', '1px solid #2caeb6');
-        $('.search_input').css('border-shadow', '0 0 2px 0 #6a9997');
+        $('.search_input').css('border', '5px solid #2caeb6');
+        // $('.search_input').css('border-shadow', '0 0 2px 0 #6a9997');
     });
     $('#input_con').blur(function () {
         $('.search_input').css('border', '1px solid #c3c3c3');
-        $('.search_input').css('border-shadow', '0 0 2px 0 #969696');
+        // $('.search_input').css('border-shadow', '0 0 2px 0 #969696');
     });
 
     /*------点击图标回首页------*/

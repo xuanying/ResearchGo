@@ -4,11 +4,11 @@ $(function () {
     var con_in = $('.con_input');
     in_con.focus(function () {
         con_in.css('border', '1px solid #2caeb6');
-        con_in.css('border-shadow', '0 0 2px 0 #6a9997');
+        // con_in.css('border-shadow', '0 0 2px 0 #6a9997');
     });
     in_con.blur(function () {
         con_in.css('border', '1px solid #c3c3c3');
-        con_in.css('border-shadow', '0 0 2px 0 #969696');
+        // con_in.css('border-shadow', '0 0 2px 0 #969696');
     });
     // 从后台获取数据
 
